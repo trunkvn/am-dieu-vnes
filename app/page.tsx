@@ -3,6 +3,7 @@ import { Sheet } from "@/app/_components/Sheet/Sheet";
 import { SCENES } from "@/app/_lib/scenes";
 import { Footer } from "@/app/_components/Footer/Footer";
 import { Cover } from "./_sections/Cover/Cover";
+import { DrawVoice } from "./_sections/DrawVoice/DrawVoice";
 import { Opening } from "./_sections/Opening/Opening";
 import { SixTones } from "./_sections/SixTones/SixTones";
 import { WhatIsATone } from "./_sections/WhatIsATone/WhatIsATone";
@@ -16,6 +17,7 @@ export default function Home() {
         <Opening />
         <WhatIsATone />
         <SixTones />
+        <DrawVoice />
       </Sheet>
       <Footer />
     </>
