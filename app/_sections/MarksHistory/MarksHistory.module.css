@@ -1,0 +1,64 @@
+.history {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
+}
+
+.timeline {
+  position: relative;
+}
+
+/* the dotted line the dates hang from */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 14px;
+  bottom: 14px;
+  border-left: 3px dotted var(--ink-soft);
+}
+
+.timeline li {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 32px;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 3px solid var(--pen);
+}
+
+.timeline time {
+  display: block;
+  font: 400 28px / var(--lh) var(--note);
+  color: var(--pen);
+}
+
+.timeline p {
+  font-size: 16px;
+  max-width: 50ch;
+}
+
+.side {
+  position: sticky;
+  top: 32px;
+}
+
+@media (max-width: 960px) {
+  .history {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .side {
+    position: static;
+  }
+}
