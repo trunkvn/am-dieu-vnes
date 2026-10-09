@@ -1,0 +1,25 @@
+.heading {
+  position: relative;
+  font: 800 clamp(30px, 4.6vw, 56px) / calc(var(--lh) * 2) var(--sans);
+  letter-spacing: -0.02em;
+  color: var(--ink-deep);
+  margin-bottom: 32px;
+}
+
+/* the teacher's double underline */
+.heading::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  bottom: -4px;
+  width: 112px;
+  height: 7px;
+  border-top: 2px solid var(--pen);
+  border-bottom: 2px solid var(--pen);
+  transform: rotate(-1deg);
+}
+
+.heading em {
+  font-style: normal;
+  color: var(--pen);
+}

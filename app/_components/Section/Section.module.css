@@ -1,0 +1,60 @@
+.sec {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--margin) minmax(0, 1fr);
+  padding: 96px 0 var(--pb);
+}
+
+.first {
+  padding-top: 64px;
+}
+
+/* squared paper */
+.graph {
+  background-color: var(--paper);
+  background-image:
+    repeating-linear-gradient(to bottom, transparent 0 31px, var(--rule) 31px 32px),
+    repeating-linear-gradient(to right, transparent 0 31px, var(--rule) 31px 32px);
+  background-position:
+    0 -5px,
+    0 0;
+}
+
+.num {
+  align-self: start;
+  font: 400 clamp(22px, 3vw, 46px) / 1 var(--note);
+  color: var(--pen);
+  text-align: right;
+  padding: 6px 22px 0 0;
+  transform: rotate(-4deg);
+}
+
+.body {
+  padding: 0 clamp(20px, 4vw, 64px) 0 clamp(24px, 4vw, 56px);
+  max-width: 1000px;
+}
+
+.eyebrow {
+  font: 600 12px / var(--lh) var(--sans);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.eyebrow [lang] {
+  color: var(--pen);
+}
+
+@media (max-width: 720px) {
+  .sec {
+    padding-top: 64px;
+  }
+
+  .num {
+    padding-right: 8px;
+  }
+
+  .body {
+    padding: 0 16px;
+  }
+}

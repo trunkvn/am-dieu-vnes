@@ -1,0 +1,64 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 18px;
+  height: 40px;
+  border-radius: 999px;
+  border: 2px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  font: 600 14px / 1 var(--sans);
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* a toggle that is switched on */
+.btn[aria-pressed="true"] {
+  background: var(--pen);
+  border-color: var(--pen);
+  color: var(--paper);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.solid {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.solid:hover:not(:disabled) {
+  background: var(--ink-deep);
+}
+
+.round {
+  width: 40px;
+  padding: 0;
+  justify-content: center;
+}
+
+.small {
+  height: 34px;
+  padding: 0 14px;
+  font-size: 13px;
+}
+
+.small.round {
+  width: 34px;
+  padding: 0;
+}
+
+.btn svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}

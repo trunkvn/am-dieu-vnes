@@ -1,0 +1,7 @@
+/* red-pen margin note */
+.note {
+  font: 400 22px / var(--lh) var(--note);
+  color: var(--pen);
+  transform: rotate(-1.5deg);
+  display: inline-block;
+}

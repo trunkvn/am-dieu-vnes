@@ -1,0 +1,67 @@
+.desk {
+  padding: 32px clamp(0px, 3vw, 40px) 32px;
+}
+
+.sheet {
+  position: relative;
+  max-width: 1240px;
+  margin: 0 auto;
+  background-color: var(--paper);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 31px,
+    var(--rule) 31px 32px
+  );
+  background-position: 0 -5px;
+  box-shadow:
+    0 0 0 1px rgba(60, 40, 10, 0.08),
+    0 36px 60px -24px rgba(60, 40, 10, 0.45);
+  border-radius: 3px;
+}
+
+/* the red margin */
+.sheet::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--margin);
+  width: 1.5px;
+  background: var(--margin-red);
+  box-shadow: 4px 0 0 var(--margin-red);
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* binding holes */
+.sheet::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 26px;
+  width: 26px;
+  background: radial-gradient(
+      circle at 50% 50%,
+      var(--desk) 0 9px,
+      rgba(60, 40, 10, 0.28) 10px,
+      transparent 12px
+    )
+    0 0 / 26px 360px repeat-y;
+  pointer-events: none;
+}
+
+@media (max-width: 720px) {
+  .desk {
+    padding-top: 0;
+  }
+
+  .sheet {
+    border-radius: 0;
+  }
+
+  .sheet::after {
+    display: none;
+  }
+}

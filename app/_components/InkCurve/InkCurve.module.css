@@ -1,0 +1,58 @@
+/* curves drawn in ink */
+.ink {
+  color: var(--ink);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 4.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  overflow: visible;
+}
+
+/* the wobble is only applied to the curve, never the staff lines */
+.ink use {
+  filter: url(#rough);
+}
+
+.pen {
+  color: var(--pen);
+}
+
+.ghost {
+  color: var(--ink);
+  opacity: 0.45;
+  stroke-dasharray: 2 9;
+}
+
+.staff {
+  stroke: var(--rule);
+  stroke-width: 1;
+}
+
+/*
+ * Sweep in from the left, like pitch over time. Hidden only when scripts run,
+ * so the curve is still visible without JS.
+ */
+@media (scripting: enabled) {
+  .sweep {
+    clip-path: inset(-10px 100% -10px -10px);
+  }
+
+  .seen .sweep {
+    animation: sweep 1.6s cubic-bezier(0.45, 0, 0.2, 1) var(--delay, 0s) forwards;
+  }
+}
+
+@keyframes sweep {
+  to {
+    clip-path: inset(-10px -10px -10px -10px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sweep,
+  .seen .sweep {
+    clip-path: none;
+    animation: none;
+  }
+}
