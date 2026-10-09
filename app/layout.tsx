@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Be_Vietnam_Pro, Patrick_Hand, Playwrite_VN } from "next/font/google";
 import "./globals.css";
+import { LoadingScreen } from "@/app/_components/LoadingScreen/LoadingScreen";
 
 const beVietnam = Be_Vietnam_Pro({
   variable: "--font-be-vietnam",
@@ -32,7 +33,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${beVietnam.variable} ${patrick.variable} ${playwrite.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <LoadingScreen />
+        {children}
+      </body>
     </html>
   );
 }
