@@ -1,0 +1,85 @@
+.two {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.para {
+  max-width: 60ch;
+  margin-bottom: 32px;
+}
+
+.vi {
+  font-family: var(--hand);
+  font-size: 1.1em;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.things {
+  margin-bottom: 32px;
+}
+
+.thing {
+  display: grid;
+  grid-template-columns: 7.5em minmax(0, 1fr);
+}
+
+.thing dt {
+  font: 600 12px / var(--lh) var(--sans);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.thing dd {
+  margin: 0;
+}
+
+.compare {
+  display: grid;
+  gap: 40px;
+  padding-top: 12px;
+}
+
+.case {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 120px;
+  gap: 16px;
+  align-items: center;
+}
+
+.words {
+  font: 400 36px / 1.4 var(--hand);
+  color: var(--ink);
+}
+
+.words small {
+  display: block;
+  font: 600 12px / var(--lh) var(--sans);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.curve {
+  width: 100%;
+  height: auto;
+}
+
+.cap {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 960px) {
+  .two {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .thing {
+    grid-template-columns: 1fr;
+  }
+}
