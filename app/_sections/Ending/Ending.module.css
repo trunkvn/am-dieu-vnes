@@ -1,0 +1,57 @@
+.lede {
+  max-width: 60ch;
+  margin-bottom: 32px;
+  font-size: 19px;
+}
+
+.lede [lang] {
+  font-family: var(--hand);
+  color: var(--ink);
+}
+
+.stamp {
+  display: inline-block;
+  border: 4px double var(--pen);
+  color: var(--pen);
+  padding: 0 20px;
+  font: 400 40px / 64px var(--note);
+  transform: rotate(-6deg);
+  margin: 0 0 32px;
+}
+
+.fine {
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 2px dashed var(--rule);
+  max-width: 72ch;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.fine p + p {
+  margin-top: 16px;
+}
+
+.fine b {
+  color: var(--ink);
+}
+
+.fine a {
+  color: var(--ink);
+  text-decoration-color: var(--rule);
+  text-underline-offset: 3px;
+}
+
+.fine a:hover {
+  text-decoration-color: var(--pen);
+}
+
+.sources {
+  margin: 8px 0 0 1.4em;
+  list-style: decimal;
+}
+
+.sources li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}

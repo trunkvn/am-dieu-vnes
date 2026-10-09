@@ -4,6 +4,7 @@ import { SCENES } from "@/app/_lib/scenes";
 import { Footer } from "@/app/_components/Footer/Footer";
 import { Cover } from "./_sections/Cover/Cover";
 import { DrawVoice } from "./_sections/DrawVoice/DrawVoice";
+import { Ending } from "./_sections/Ending/Ending";
 import { ListenChoose } from "./_sections/ListenChoose/ListenChoose";
 import { MarksHistory } from "./_sections/MarksHistory/MarksHistory";
 import { NorthSouth } from "./_sections/NorthSouth/NorthSouth";
@@ -26,6 +27,7 @@ export default function Home() {
         <ListenChoose />
         <NorthSouth />
         <MarksHistory />
+        <Ending />
       </Sheet>
       <Footer />
     </>

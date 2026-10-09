@@ -1,0 +1,23 @@
+.giant {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.18em;
+  margin: 0 0 32px;
+  font: 400 clamp(64px, 12vw, 160px) / 1.2 var(--hand);
+}
+
+.word {
+  appearance: none;
+  display: inline-block;
+  padding: 0;
+  background: none;
+  border: 0;
+  font: inherit;
+  color: var(--ink);
+  transform: rotate(var(--r, 0deg));
+  transition: color 0.15s;
+}
+
+.word:hover {
+  color: var(--pen);
+}
