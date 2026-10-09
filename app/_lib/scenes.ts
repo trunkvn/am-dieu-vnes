@@ -7,4 +7,5 @@ export const SCENES: Scene[] = [
   { id: "s03", num: "03", label: "Sáu thanh" },
   { id: "s04", num: "04", label: "Vẽ giọng" },
   { id: "s05", num: "05", label: "Nói lại" },
+  { id: "s06", num: "06", label: "Nghe và chọn" },
 ];

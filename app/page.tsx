@@ -4,6 +4,7 @@ import { SCENES } from "@/app/_lib/scenes";
 import { Footer } from "@/app/_components/Footer/Footer";
 import { Cover } from "./_sections/Cover/Cover";
 import { DrawVoice } from "./_sections/DrawVoice/DrawVoice";
+import { ListenChoose } from "./_sections/ListenChoose/ListenChoose";
 import { Opening } from "./_sections/Opening/Opening";
 import { SayBack } from "./_sections/SayBack/SayBack";
 import { SixTones } from "./_sections/SixTones/SixTones";
@@ -20,6 +21,7 @@ export default function Home() {
         <SixTones />
         <DrawVoice />
         <SayBack />
+        <ListenChoose />
       </Sheet>
       <Footer />
     </>
