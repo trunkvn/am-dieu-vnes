@@ -4,6 +4,7 @@ import { SCENES } from "@/app/_lib/scenes";
 import { Footer } from "@/app/_components/Footer/Footer";
 import { Cover } from "./_sections/Cover/Cover";
 import { Opening } from "./_sections/Opening/Opening";
+import { SixTones } from "./_sections/SixTones/SixTones";
 import { WhatIsATone } from "./_sections/WhatIsATone/WhatIsATone";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
         <Cover />
         <Opening />
         <WhatIsATone />
+        <SixTones />
       </Sheet>
       <Footer />
     </>

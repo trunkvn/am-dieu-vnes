@@ -1,0 +1,8 @@
+.lede {
+  max-width: 60ch;
+  margin-bottom: 32px;
+}
+
+.lede b {
+  color: var(--pen);
+}

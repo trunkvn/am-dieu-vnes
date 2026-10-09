@@ -1,0 +1,96 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 28px;
+  margin-top: 56px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 22px;
+}
+
+/* briefly outlined in red pen while its sound plays */
+.lit {
+  outline: 2px solid var(--pen);
+  outline-offset: 3px;
+}
+
+.top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.mark {
+  font: 400 56px / 1 var(--hand);
+  color: var(--ink);
+}
+
+.num {
+  font: 400 20px / 1 var(--note);
+  color: var(--pen);
+}
+
+.name {
+  font: 800 22px / var(--lh) var(--sans);
+  color: var(--ink-deep);
+}
+
+.name span + span {
+  font: 400 14px / var(--lh) var(--sans);
+  color: var(--ink-soft);
+  margin-left: 6px;
+}
+
+.curve {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 8px 0;
+}
+
+.how {
+  flex: 1;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.example {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.word {
+  display: block;
+  font: 400 26px / 1.4 var(--hand);
+  color: var(--ink);
+}
+
+.mean {
+  display: block;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--ink-soft);
+}
+
+.actions {
+  display: flex;
+  flex: none;
+  gap: 8px;
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
