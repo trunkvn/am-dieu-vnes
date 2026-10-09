@@ -1,0 +1,58 @@
+.cover {
+  display: grid;
+  grid-template-columns: var(--margin) minmax(0, 1fr);
+  padding-top: 32px;
+}
+
+.body {
+  padding: 0 clamp(20px, 4vw, 64px) 0 clamp(24px, 4vw, 56px);
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.label {
+  border: 2px solid var(--ink);
+  background: var(--paper);
+  padding: 8px 18px;
+  transform: rotate(-1.2deg);
+  font: 400 20px / 32px var(--note);
+  color: var(--ink);
+  box-shadow: 4px 4px 0 rgba(53, 41, 154, 0.15);
+}
+
+.label b {
+  font: 600 11px / 32px var(--sans);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  display: block;
+  color: var(--ink-soft);
+}
+
+.label u {
+  text-decoration: none;
+  border-bottom: 1.5px dotted var(--ink-soft);
+  padding: 0 0.6em;
+}
+
+.date {
+  font: 400 20px / 32px var(--note);
+  color: var(--ink-soft);
+  padding-top: 4px;
+}
+
+.date i {
+  display: inline-block;
+  width: 3.2ch;
+  border-bottom: 1.5px dotted var(--ink-soft);
+}
+
+@media (max-width: 720px) {
+  .body {
+    padding: 0 16px;
+    gap: 8px;
+  }
+}

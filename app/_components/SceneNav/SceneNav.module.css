@@ -1,0 +1,38 @@
+.nav {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.nav ul {
+  display: grid;
+  gap: 6px;
+}
+
+.tab {
+  display: block;
+  padding: 3px 12px 3px 9px;
+  text-decoration: none;
+  font: 400 17px / 24px var(--note);
+  color: var(--paper);
+  background: var(--ink);
+  border-radius: 8px 0 0 8px;
+  transform: translateX(14px);
+  transition:
+    transform 0.15s,
+    background 0.15s;
+}
+
+.tab:hover,
+.tab[aria-current="true"] {
+  transform: none;
+  background: var(--pen);
+}
+
+@media (max-width: 1180px) {
+  .nav {
+    display: none;
+  }
+}
