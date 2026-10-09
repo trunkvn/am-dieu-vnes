@@ -5,6 +5,7 @@ import { Footer } from "@/app/_components/Footer/Footer";
 import { Cover } from "./_sections/Cover/Cover";
 import { DrawVoice } from "./_sections/DrawVoice/DrawVoice";
 import { ListenChoose } from "./_sections/ListenChoose/ListenChoose";
+import { NorthSouth } from "./_sections/NorthSouth/NorthSouth";
 import { Opening } from "./_sections/Opening/Opening";
 import { SayBack } from "./_sections/SayBack/SayBack";
 import { SixTones } from "./_sections/SixTones/SixTones";
@@ -22,6 +23,7 @@ export default function Home() {
         <DrawVoice />
         <SayBack />
         <ListenChoose />
+        <NorthSouth />
       </Sheet>
       <Footer />
     </>

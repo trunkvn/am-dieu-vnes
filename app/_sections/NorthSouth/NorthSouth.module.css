@@ -1,0 +1,57 @@
+.lede {
+  max-width: 60ch;
+  font-size: 19px;
+}
+
+.central {
+  margin-top: 40px;
+  max-width: 62ch;
+}
+
+.mothers {
+  margin-top: 64px;
+  max-width: 760px;
+  padding: 32px 28px;
+}
+
+.mothersTitle {
+  font: 800 22px / var(--lh) var(--sans);
+  color: var(--ink-deep);
+  margin-bottom: 8px;
+}
+
+.mothersList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  text-align: center;
+}
+
+.mother {
+  display: block;
+  font: 400 60px / 1.4 var(--hand);
+  color: var(--ink);
+}
+
+.place {
+  font: 600 12px / var(--lh) var(--sans);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.joke {
+  margin-top: 16px;
+  font-size: 15px;
+}
+
+.joke [lang] {
+  font-family: var(--hand);
+  color: var(--ink);
+}
+
+@media (max-width: 720px) {
+  .mothersList {
+    grid-template-columns: 1fr;
+  }
+}

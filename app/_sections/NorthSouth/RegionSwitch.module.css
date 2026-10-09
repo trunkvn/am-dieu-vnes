@@ -1,0 +1,87 @@
+.panel {
+  margin-top: 56px;
+  padding: 32px 28px;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 24px;
+}
+
+.switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.count {
+  font: 600 12px / var(--lh) var(--sans);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.count span {
+  font: 400 56px / 1 var(--hand);
+  letter-spacing: 0;
+  color: var(--pen);
+  margin-right: 6px;
+}
+
+.slots {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px 20px;
+  margin: 24px 0;
+}
+
+.slot {
+  appearance: none;
+  display: grid;
+  gap: 4px;
+  width: 100%;
+  padding: 8px 8px 4px;
+  background: none;
+  border: 2px dashed transparent;
+  border-radius: 8px;
+  text-align: center;
+  transition: border-color 0.15s;
+}
+
+.slot:hover {
+  border-color: var(--rule);
+}
+
+.curve {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.words {
+  font: 400 32px / 1.4 var(--hand);
+  color: var(--ink);
+}
+
+.merged .words {
+  color: var(--pen);
+}
+
+.text {
+  max-width: 60ch;
+}
+
+.fine {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 720px) {
+  .slots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
