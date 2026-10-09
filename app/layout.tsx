@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Be_Vietnam_Pro, Patrick_Hand, Playwrite_VN } from "next/font/google";
 import "./globals.css";
 import { LoadingScreen } from "@/app/_components/LoadingScreen/LoadingScreen";
@@ -21,10 +21,53 @@ const playwrite = Playwrite_VN({
   variable: "--font-playwrite",
 });
 
+const TITLE = "ma mà má mả mã mạ — one syllable, six voices";
+const DESCRIPTION =
+  "One syllable, six tones, six different words. A notebook-page tour of Vietnamese tones: listen, draw your voice, say it back.";
+
+/** Where the site lives, so share images get full URLs. Set NEXT_PUBLIC_SITE_URL once it has a domain. */
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "http://localhost:3000");
+
 export const metadata: Metadata = {
-  title: "ma mà má mả mã mạ — one syllable, six voices",
-  description:
-    "One syllable, six tones, six different words. A notebook-page tour of Vietnamese tones: listen, draw your voice, say it back.",
+  metadataBase: new URL(siteUrl),
+  title: TITLE,
+  description: DESCRIPTION,
+  applicationName: "Vở tập nói",
+  authors: [{ name: "Gnoud" }],
+  creator: "Gnoud",
+  category: "education",
+  keywords: [
+    "Vietnamese tones",
+    "Vietnamese pronunciation",
+    "learn Vietnamese",
+    "thanh điệu",
+    "sáu thanh",
+    "ma mà má mả mã mạ",
+    "Hanoi Vietnamese",
+  ],
+  openGraph: {
+    type: "website",
+    siteName: "Vở tập nói",
+    title: TITLE,
+    description: DESCRIPTION,
+    locale: "en_US",
+    alternateLocale: ["vi_VN"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
+  robots: { index: true, follow: true },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#d6c49b",
+  colorScheme: "light",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
