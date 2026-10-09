@@ -1,0 +1,12 @@
+.quote {
+  font: 800 clamp(30px, 4.4vw, 52px) / calc(var(--lh) * 2) var(--sans);
+  letter-spacing: -0.02em;
+  color: var(--ink-deep);
+  max-width: 15em;
+  margin-bottom: 32px;
+}
+
+.quote em {
+  font-style: normal;
+  color: var(--pen);
+}
