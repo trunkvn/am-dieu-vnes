@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "ma mà má mả mã mạ — one syllable, six voices",
-    short_name: "Vở tập nói",
+    name: "Âm Điệu — The Six Tones of Vietnamese",
+    short_name: "Âm Điệu",
     description:
       "One syllable, six tones, six different words. A notebook-page tour of Vietnamese tones: listen, draw your voice, say it back.",
     start_url: "/",

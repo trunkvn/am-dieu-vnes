@@ -21,7 +21,7 @@ const playwrite = Playwrite_VN({
   variable: "--font-playwrite",
 });
 
-const TITLE = "ma mà má mả mã mạ — one syllable, six voices";
+const TITLE = "Âm Điệu — The Six Tones of Vietnamese";
 const DESCRIPTION =
   "One syllable, six tones, six different words. A notebook-page tour of Vietnamese tones: listen, draw your voice, say it back.";
 
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: TITLE,
   description: DESCRIPTION,
-  applicationName: "Vở tập nói",
+  applicationName: "Âm Điệu",
   authors: [{ name: "Gnoud" }],
   creator: "Gnoud",
   category: "education",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    siteName: "Vở tập nói",
+    siteName: "Âm Điệu",
     title: TITLE,
     description: DESCRIPTION,
     locale: "en_US",
